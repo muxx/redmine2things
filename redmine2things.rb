@@ -37,7 +37,6 @@ class Redmine2Things
   
   # Create projects and tasks hash arrays, which were imported from redmine to Things earlier
   def load_things_data()
-    # находим проекты с id проектов в redmine и заносим их в хеш-массив
     @things_projects_hash = {}
     @things_archive_projects_hash = {}
     @things_todos_hash = {}  
@@ -101,7 +100,6 @@ class Redmine2Things
     @issues.each do |issue|      
       todo_id = (@redmine_params[:task_url_prefix] + issue.id).to_sym
       if (!@things_todos_hash.key?(todo_id))
-        #находим или создаем проект под задачу
         project_id = (@redmine_params[:project_url_prefix] + issue.project.id).to_sym
 
         if (@things_projects_hash.key?(project_id))          
