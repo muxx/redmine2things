@@ -1,1 +1,12 @@
-Syncs projects and tasks between Redmine (http://www.redmine.org) and Things (http://culturedcode.com/)
+Syncs projects and tasks between Redmine (http://www.redmine.org) and Things (http://culturedcode.com/).
+--
+1. Sync only not closed tasks in redmine
+1. Create projects in Things if not found their (you can define area which projects will be created in and tags assigned to project)
+2. Create tasks in Things if not found their (set name, link to task, estimated hours)
+
+All parameters set in sync.rb file.
+
+Run syncing:
+--
+> ruby sync.rb
+
